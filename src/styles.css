@@ -7,7 +7,7 @@ body {
 
 @font-face {
   font-family: Martyr;
-  src: url('/assets/Martyr.ttf') format('truetype');
+  src: url('/assets/fonts/Martyr.ttf') format('truetype');
 }
 
 html, body { height: 100%; }

@@ -1,5 +1,5 @@
 import { NgModule } from "@angular/core";
-import { PublicHomeComponent } from "./public-home.component";
+import { PublicHomeComponent } from "./pages/home/public-home.component";
 import { RouterModule, Routes } from "@angular/router";
 import { CommonModule } from "@angular/common";
 import { AnimationService } from "./services/animation.service";

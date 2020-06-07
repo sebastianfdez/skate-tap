@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { AnimationService } from "./services/animation.service";
+import { AnimationService } from "../../services/animation.service";
 
 @Component({
   selector: 'app-public-home',
@@ -13,7 +13,7 @@ export class PublicHomeComponent {
 
   elementInViewport(element: HTMLElement) {
     const inviewport = this.animationService.elementInViewport(element);
-    console.log(inviewport);
+    // console.log(inviewport); //always comment console.log when pushing to production
     return inviewport;
   }
 }
