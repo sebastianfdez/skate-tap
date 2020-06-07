@@ -1,0 +1,114 @@
+:host {
+  min-width: 100vw;
+  overflow: scroll;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2;
+  font-family: 'Roboto', sans-serif;
+  // background: linear-gradient(to bottom, #ffffff 0%, #ffffff 20%, #000000 20%, #000000 100%);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10vh;
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+
+  h3 {
+    width: 1000px;
+    max-width: 70vw;
+    font-size: 3vmax;
+    line-height: 1.5;
+    font-family: 'Roboto', sans-serif;
+    color: #000000;
+    text-align: center;
+    font-weight: 100 !important;
+    &.martyr {
+      letter-spacing: 4px;
+      font-size: 6vmax;
+      font-family: Martyr;
+      @media (min-width: 800px) {
+        letter-spacing: 20px;
+        font-size: 6rem;
+      }
+    }
+  }
+
+  &.left {
+    &:not(.animate__fadeInRight) {
+      transform: translateX(-100%);
+    }
+  }
+
+  &.right {
+    &:not(.animate__fadeInLeft) {
+      transform: translateX(100%);
+    }
+  }
+}
+
+.background {
+  min-height: 100vh;
+  min-width: 100vw;
+  position: fixed;
+  background-size: cover;
+  z-index: -1;
+  top: 0;
+}
+.background-2 {
+  // background-color: rgba(255, 255, 255, 0.297);
+  min-height: 100vh;
+  min-width: 100vw;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+}
+
+.logo, .coming-soon {
+  z-index: 1;
+  margin-bottom: 50px;
+  img {
+    width: 70vw;
+    max-width: 700px;
+  }
+}
+.footer {
+  flex: 0 0 auto;
+  position: relative;
+  height: 26vh;
+  min-height: 20vh;
+  place-content: flex-end;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10vh;
+  background-color: #88888878;
+  width: 100%;
+  align-items: center;
+  .fa {
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+    opacity: 0.7;
+    padding: 15px;
+    font-size: 15px;
+    width: 15px;
+    color: #FFFFFF;
+    background: #000000;
+    @media (min-width: 800px) {
+      padding: 20px;
+      font-size: 30px;
+      width: 30px;
+    }
+  }
+
+  .fa:hover {
+    opacity: 1;
+  }
+}
