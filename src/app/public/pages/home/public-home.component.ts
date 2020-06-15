@@ -7,6 +7,7 @@ import { AnimationService } from "../../services/animation.service";
   styleUrls: ['./public-home.component.scss'],
 })
 export class PublicHomeComponent {
+  opened = true;
   constructor(
     private animationService: AnimationService,
   ) {}

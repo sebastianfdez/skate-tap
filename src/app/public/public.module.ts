@@ -3,6 +3,7 @@ import { PublicHomeComponent } from "./pages/home/public-home.component";
 import { RouterModule, Routes } from "@angular/router";
 import { CommonModule } from "@angular/common";
 import { AnimationService } from "./services/animation.service";
+import { MaterialModule } from '../material.module';
 
 export const ROUTES: Routes = [
   {
@@ -14,6 +15,7 @@ export const ROUTES: Routes = [
 @NgModule({
   imports: [
     CommonModule,
+    MaterialModule,
     RouterModule.forChild(ROUTES),
   ],
   declarations: [

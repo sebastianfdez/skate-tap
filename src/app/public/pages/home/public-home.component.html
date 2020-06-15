@@ -1,5 +1,8 @@
 <div class="header">
-  <ul>
+  <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+    <mat-icon>menu</mat-icon>
+  </button>
+  <ul fxShow="true" fxHide.lt-md>
     <li><a href="#">About</a></li>
     <li><a href="#">Helmet Hat SnapBack Hat</a></li>
     <li><a href="#">Book Skateboard</a></li>
@@ -10,34 +13,66 @@
     <li><a href="#">Contact</a></li>
   </ul>
 </div>
-<div class="section animate__animated animate__fadeInLeft"
-#section1>
-  <div class="logo">
-    <img src="̱../../assets/images/logo-skate-tap.png">
-  </div>
-  <div class="coming-soon">
-    <img src="̱../../assets/images/coming-soon.gif">
-  </div>
-</div>
-<div class="section animate__animated animate__fadeInRight"
-#section2>
-  <h3 class="martyr">
-    ANTWUANDIXON
-  </h3>
-  <h3>
-    SkateTap is a Micro Mobility service that makes public Electronic skateboards available for shared users to individuals on a short term basis.
-  </h3>
-  <h3>
-    The skateboards can be unlocked from one hub and returned to any hub in the system making SkateTap ideal for short one way trips.
-  </h3>
-</div>
-<div class="footer">
-  <div class="footer-social">
-    <a href="#" class="fa fa-facebook"></a>
-    <!-- <a href="#" class="fa fa-twitter"></a> -->
-    <!-- <a href="#" class="fa fa-google"></a> -->
-    <!-- <a href="#" class="fa fa-linkedin"></a> -->
-    <!-- <a href="#" class="fa fa-youtube"></a> -->
-    <a href="https://www.instagram.com/laskatetap/" class="fa fa-instagram"></a>
-  </div>
+<div class="flex-div full-height full-width">
+  <mat-sidenav-container fxFlexFill>
+    <mat-sidenav #sidenav>
+      <mat-nav-list>
+        <a href="#" mat-list-item>About</a>
+        <a href="#" mat-list-item>Helmet Hat SnapBack Hat</a>
+        <a href="#" mat-list-item>Book Skateboard</a>
+        <a href="#" mat-list-item>Pick up</a>
+        <a href="#" mat-list-item>Drop Off</a>
+        <a href="#" mat-list-item>Recycle Board</a>
+        <a href="#" mat-list-item>Partners</a>
+        <a href="#" mat-list-item>Contact</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content fxFlexFill>
+      <div class="flex-div column full-height full-width">
+        <div class="section animate__animated animate__fadeInLeft"
+        #section1>
+          <div class="logo">
+            <img src="̱../../assets/images/logo-skate-tap.png">
+          </div>
+          <div class="coming-soon">
+            <img src="̱../../assets/images/coming-soon.gif">
+          </div>
+        </div>
+        <div class="section animate__animated animate__fadeInRight"
+        #section2>
+          <h3 class="martyr">
+            ANTWUANDIXON
+          </h3>
+          <h3>
+            SkateTap is a Micro Mobility service that makes commercial E - Skateboards and Single seaters available for shared use to individuals on a short term basis.
+          </h3>
+          <h3>
+            Many cities already are putting into place different kinds of policies to address the micromobility industry and encouraging the new mobility option. This new form of transportation is seeing the benefits of the first and last mile mobility option that aligns well with many cities goals of reducing congestion and emissions.
+          </h3>
+          <h3>
+            The skateboards can be unlocked from one hub and returned to any hub in the system making SkateTap ideal for short one way trips.
+          </h3>
+          <!-- <h3>
+            Transportation data reveals there is a real demand for single occupant vehicles. SkateTap is a new entrant int the on demand micromobility space offering commercial high tech skateboards and Single Seaters available to the public for short distance travel, transforming the future of passenger and goods mobility.
+          </h3>
+          <h3>
+            As cities face rapid growth, the need for passenger and goods mobility through existing transportation networks is becoming more urgent. Moving people to and from transit remains difficult. If people lack a convenient, affordable way to get on a bus or train they are more likely to opt for a personal vehicle, contributing to the gridlock and poor air quality that plagues so many cities. Even worse they may opt to not travel at all missing out on job opportunities, access to healthy food, preventative medical care and more. Micromobility bridges the gap between existing public transport service offering a solution to address the deficiencies of in between access from public transport points, and even replace public transport or under 30 min travel trips all together.l connecting people to mass transport. 
+          </h3>
+          <h3>
+            Sidewalk riding reflects, in part, limitations of many cities infrastructure which for decades has prioritised cars at the expense of other modes of transport. It remains unclear how dangerous e skateboard are restive to other modes of transport, how different riding behaviours ( helmet use, speed St) effect injury rates. It is worth remembering that automobile crashes kill roughly 1.25 million people worldwide every year. Our commitment to safe, effective and fun transport is paramount, Encouraging the most safety that includes increasing helmet availability and usage, education to users on safer riding techniques and modifying vehicle designs to a more commercial vehicle that is less recreational with larger wheels better able to manage uneven pavement.
+          </h3> -->
+        </div>
+        <div class="footer">
+          <div class="footer-social">
+            <a href="#" class="fa fa-facebook"></a>
+            <!-- <a href="#" class="fa fa-twitter"></a> -->
+            <!-- <a href="#" class="fa fa-google"></a> -->
+            <!-- <a href="#" class="fa fa-linkedin"></a> -->
+            <!-- <a href="#" class="fa fa-youtube"></a> -->
+            <a href="https://www.instagram.com/laskatetap/" class="fa fa-instagram"></a>
+          </div>
+        </div>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
 </div>

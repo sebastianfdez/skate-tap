@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "̱~./assets/styles/material-overrides.scss";
+
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  margin: 0;
+}
+
+@font-face {
+  font-family: Martyr;
+  src: url('/assets/fonts/Martyr.ttf') format('truetype');
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Roboto', sans-serif; }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Roboto', sans-serif; }
+
+.flex-div {
+  display: flex;
+  align-items: center;
+  &.column {
+    flex-direction: column;
+  }
+}
+
+.full-height {
+  height: 100%;
+}
+.full-width {
+  width: 100%;
+}
