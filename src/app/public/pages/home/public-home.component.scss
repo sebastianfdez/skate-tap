@@ -11,14 +11,16 @@
 }
 
 .section {
-  display: flex;
-  flex-direction: column;
   height: 100vh;
-  align-items: center;
   justify-content: center;
   margin-bottom: 10vh;
   min-height: fit-content;
   font-family: 'Roboto', sans-serif;
+  &.home {
+    @media (min-width: 800px) {
+      flex-direction: row;
+    }
+  }
 
   h3 {
     width: 1000px;
@@ -53,12 +55,36 @@
   }
 }
 
+.logos, .texts {
+  max-width: 85vw;
+  flex: 0 0 auto;
+  margin: 5%;
+  width: fit-content;
+  box-sizing: content-box;
+  min-width: 30vw;
+  min-height: 40vh;
+  font-size: 2vmax;
+  h2 {
+    line-height: 1.5;
+    font-family: 'Roboto', sans-serif;
+    color: #000000;
+    text-align: center;
+    font-weight: 100 !important;
+  }
+  @media (min-width: 800px) {
+    max-width: 30vw;
+  }
+}
+
 .logo, .coming-soon {
   z-index: 1;
   margin-bottom: 50px;
   img {
-    width: 70vw;
-    max-width: 700px;
+    width: 400px;
+    max-width: 65vw;
+    @media (min-width: 800px) {
+      max-width: 25 vw;
+    }
   }
 }
 
@@ -131,4 +157,5 @@
   .fa:hover {
     opacity: 1;
   }
+
 }
