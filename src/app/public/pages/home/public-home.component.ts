@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { AnimationService } from "../../services/animation.service";
 
 @Component({
@@ -6,8 +6,9 @@ import { AnimationService } from "../../services/animation.service";
   templateUrl: './public-home.component.html',
   styleUrls: ['./public-home.component.scss'],
 })
-export class PublicHomeComponent {
+export class PublicHomeComponent implements OnInit {
   opened = true;
+  show = 0;
   constructor(
     private animationService: AnimationService,
   ) {}
@@ -16,5 +17,13 @@ export class PublicHomeComponent {
     const inviewport = this.animationService.elementInViewport(element);
     // console.log(inviewport); //always comment console.log when pushing to production
     return inviewport;
+  }
+
+  ngOnInit() {
+    for (let i = 0; i < 3; i++) {
+      setTimeout(() => {
+        this.show++;
+      }, (i + 1) * 700 + 200);
+    }
   }
 }

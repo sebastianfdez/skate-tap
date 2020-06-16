@@ -1,3 +1,6 @@
 .mat-drawer-container {
   background-color: #FFFFFF;
+  > mat-sidenav > mat-nav-list {
+    min-width: 20vw;
+  }
 }

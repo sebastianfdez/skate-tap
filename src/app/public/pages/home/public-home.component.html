@@ -1,15 +1,11 @@
 <div class="header">
-  <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+  <button mat-icon-button (click)="sidenav.toggle()" fxShow="true">
     <mat-icon>menu</mat-icon>
   </button>
-  <ul fxShow="true" fxHide.lt-md>
+  <ul fxShow="true" fxHide>
     <li><a href="#">About</a></li>
-    <li><a href="#">Helmet Hat SnapBack Hat</a></li>
-    <li><a href="#">Book Skateboard</a></li>
-    <li><a href="#">Pick up</a></li>
-    <li><a href="#">Drop Off</a></li>
-    <li><a href="#">Recycle Board</a></li>
-    <li><a href="#">Partners</a></li>
+    <li><a href="#">Wearables</a></li>
+    <li><a href="#">Vehicles</a></li>
     <li><a href="#">Contact</a></li>
   </ul>
 </div>
@@ -17,28 +13,31 @@
   <mat-sidenav-container fxFlexFill>
     <mat-sidenav #sidenav>
       <mat-nav-list>
-        <a href="#" mat-list-item>About</a>
-        <a href="#" mat-list-item>Helmet Hat SnapBack Hat</a>
-        <a href="#" mat-list-item>Book Skateboard</a>
-        <a href="#" mat-list-item>Pick up</a>
-        <a href="#" mat-list-item>Drop Off</a>
-        <a href="#" mat-list-item>Recycle Board</a>
-        <a href="#" mat-list-item>Partners</a>
-        <a href="#" mat-list-item>Contact</a>
+        <a href="#" mat-list-item>ABOUT</a>
+        <a href="#" mat-list-item>WEARABLES</a>
+        <a href="#" mat-list-item>VEHICULES</a>
+        <a href="#" mat-list-item>CONTACT</a>
       </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content fxFlexFill>
       <div class="flex-div column full-height full-width">
-        <div class="section animate__animated animate__fadeInLeft"
+        <div class="section flex-div column animate__animated animate__fadeInRightBig home"
         #section1>
-          <div class="logo">
-            <img src="̱../../assets/images/logo-skate-tap.png">
+          <div class="logos flex-div column">
+            <div class="logo">
+              <img src="̱../../assets/images/logo-skate-tap.png">
+            </div>
+            <div class="coming-soon">
+              <img src="̱../../assets/images/coming-soon.gif">
+            </div>
           </div>
-          <div class="coming-soon">
-            <img src="̱../../assets/images/coming-soon.gif">
+          <div class="texts">
+            <h2 class="animate__animated animate__fadeInUpBig" *ngIf="show > 0">Privacy and Security</h2>
+            <h2 class="animate__animated animate__fadeInUpBig" *ngIf="show > 1">Freedom and Flexibility</h2>
+            <h2 class="animate__animated animate__fadeInUpBig" *ngIf="show > 2">Simpler, faster, and sustainable transportation</h2>
           </div>
         </div>
-        <div class="section animate__animated animate__fadeInRight"
+        <div class="section flex-div column animate__animated animate__fadeInRight"
         #section2>
           <h3 class="martyr">
             ANTWUANDIXON
@@ -47,7 +46,7 @@
             SkateTap is a Micro Mobility service that makes commercial E - Skateboards and Single seaters available for shared use to individuals on a short term basis.
           </h3>
           <h3>
-            Many cities already are putting into place different kinds of policies to address the micromobility industry and encouraging the new mobility option. This new form of transportation is seeing the benefits of the first and last mile mobility option that aligns well with many cities goals of reducing congestion and emissions.
+            This new form of transportation is seeing the benefits of the first and last mile mobility option that aligns well with many cities goals of reducing congestion and emissions.
           </h3>
           <h3>
             The skateboards can be unlocked from one hub and returned to any hub in the system making SkateTap ideal for short one way trips.
